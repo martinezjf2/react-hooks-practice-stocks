@@ -7,21 +7,16 @@ function App() {
 
   useEffect(() => {
     fetch("http://localhost:3001/stocks")
-      .then((data) => data.json)
-      .then((json) => setStocks(json));
+      .then((data) => data.json())
+      .then(setStocks);
   }, []);
 
-
-  console.log(stocks);
-  
   return (
     <div>
       <Header />
-      <MainContainer stocks={stocks}/>
+      <MainContainer stocks={stocks} setStocks={setStocks} />
     </div>
   );
 }
 
 export default App;
-
-

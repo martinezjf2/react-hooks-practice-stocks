@@ -1,8 +1,14 @@
 import React from "react";
 
-function Stock({ stock }) {
+function Stock({ stock, onHandleClick }) {
+
+const handleStockClick = (event)  => {
+  event.preventDefault();
+  onHandleClick(stock)
+}
+
   return (
-    <div>
+    <div onClick={handleStockClick}>
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">{stock.name}</h5>
