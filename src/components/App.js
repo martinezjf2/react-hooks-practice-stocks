@@ -23,3 +23,5 @@ function App() {
 }
 
 export default App;
+
+// Link to the lab: https://github.com/martinezjf2/react-hooks-practice-stocks/tree/fis-wip/src/components
